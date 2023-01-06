@@ -4,7 +4,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import profilePicture from "../img/woman.jpg";
 import { Link } from "react-router-dom";
 
-const PersonalChatHeader = () => {
+const PersonalChatHeader = ({ messageInput, setMessageInput }) => {
   return (
     <header className="flex justify-between items-center">
       <div className="flex items-center gap-4">
