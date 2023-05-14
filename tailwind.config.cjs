@@ -2,17 +2,7 @@
 module.exports = {
   content: [
     "./index.html",
-    "./src/App.jsx",
-    "./src/pages/PersonalChat.jsx",
-    "./src/pages/LoginPage.jsx",
-    "./src/components/Header.jsx",
-    "./src/components/Nav.jsx",
-    "./src/components/ChatsList.jsx",
-    "./src/components/ChatsListFooter.jsx",
-    "./src/components/PersonalChatHeader.jsx",
-    "./src/components/PersonalChatMessages.jsx",
-    "./src/components/PersonalChatFooter.jsx",
-    "./src/components/TimeAgo.jsx",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {

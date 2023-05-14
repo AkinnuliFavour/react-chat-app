@@ -1,19 +1,25 @@
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import UsersContext from "../context/UsersContext";
+import UsersContext from "../../context/UsersContext";
 
-const LoginPage = () => {
-  const [number, setNumber] = useState("");
-  const navigate = useNavigate();
-  const { users, setUsers } = useContext(UsersContext);
+const Login = () => {
+  // const [number, setNumber] = useState("");
+  // const { users, setUsers } = useContext(UsersContext);
+
+   const navigate = useNavigate();
+
+  // const handleLogin = () => {
+  //   const authUser = users.find((user) => user.phoneNumber === number);
+  //   if (authUser) {
+  //     navigate(`/chats/${authUser.id}`);
+  //   }
+  //   console.log(authUser.username);
+  // };
+
 
   const handleLogin = () => {
-    const authUser = users.find((user) => user.phoneNumber === number);
-    if (authUser) {
-      navigate(`/chats/${authUser.id}`);
-    }
-    console.log(authUser.username);
-  };
+    navigate("/chats")
+  }
   return (
     <main className="flex items-center justify-center absolute top-0 bottom-0 left-0 right-0">
       <form
@@ -28,8 +34,8 @@ const LoginPage = () => {
           name=""
           id="phone-number"
           className="w-full p-3 rounded-xl text-black outline-none mb-4"
-          value={number}
-          onChange={(e) => setNumber(e.target.value)}
+          // value={number}
+          // onChange={(e) => setNumber(e.target.value)}
           autoFocus
         />
         <input
@@ -43,4 +49,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default Login;
