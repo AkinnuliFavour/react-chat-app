@@ -1,7 +1,7 @@
-const PersonalChatMessages = ({ messages, authUser, userFriend }) => {
+const Messages = () => {
   return (
-    <main className="mt-8 flex flex-col p-4">
-      {!messages.find(
+    <main className="mt-16 flex flex-col p-4">
+      {/* {!messages.find(
         (message) =>
           (authUser.id === message.fromUserId &&
             userFriend.id === message.toUserId) ||
@@ -44,9 +44,21 @@ const PersonalChatMessages = ({ messages, authUser, userFriend }) => {
         } else {
           return;
         }
-      })}
+      })} */}
+            <div
+              className="bg-gradient-to-r from-red-500 to-red-800 self-end flex items-center gap-4 p-2 rounded-t-lg rounded-bl-lg mt-4"
+            >
+              <p className="max-w-md">Hi</p>
+              <p className="max-w-md">11:00</p>
+            </div>
+            <div
+              className="bg-gradient-to-r from-zinc-600 to-zinc-800 self-start flex items-center gap-4 p-2 rounded-t-lg rounded-br-lg mt-4"
+            >
+              <p className="max-w-md">Hi</p>
+              <p className="max-w-md">10:00</p>
+            </div>
     </main>
   );
 };
 
-export default PersonalChatMessages;
+export default Messages;

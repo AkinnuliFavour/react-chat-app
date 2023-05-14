@@ -1,39 +1,35 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Chats from "./pages/Chats";
-import PersonalChat from "./pages/PersonalChat";
+import { Routes, Route } from "react-router-dom";
+import {Login, Chats, PersonalChat} from "./pages"
 import { useState } from "react";
-import LoginPage from "./pages/LoginPage";
 import { UsersProvider } from "./context/UsersContext";
 
 function App() {
-  const [messageInput, setMessageInput] = useState("");
+  // const [messageInput, setMessageInput] = useState("");
 
   return (
     <div className="h-screen">
       <UsersProvider>
-        <BrowserRouter>
           <Routes>
             <Route
-              path="/chats/:id"
+              path="/chats"
               element={
                 <Chats
-                  messageInput={messageInput}
-                  setMessageInput={setMessageInput}
+                  // messageInput={messageInput}
+                  // setMessageInput={setMessageInput}
                 />
               }
             />
             <Route
-              path="/personal-chat/:id/:fid"
+              path="/personal-chat"
               element={
                 <PersonalChat
-                  messageInput={messageInput}
-                  setMessageInput={setMessageInput}
+                  // messageInput={messageInput}
+                  // setMessageInput={setMessageInput}
                 />
               }
             />
-            <Route path="/login" element={<LoginPage />} />
+            <Route path="/" element={<Login />} />
           </Routes>
-        </BrowserRouter>
       </UsersProvider>
     </div>
   );

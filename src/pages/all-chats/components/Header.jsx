@@ -1,5 +1,5 @@
 import React from "react";
-import profilePicture from "../img/woman.jpg";
+import profilePicture from "../../../img/woman.jpg";
 
 const Header = () => {
   return (

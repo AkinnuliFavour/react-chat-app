@@ -5,7 +5,7 @@ import { FaQrcode } from "react-icons/fa";
 import { FaCog } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const ChatsListFooter = () => {
+const Footer = () => {
   return (
     <footer className="p-4 w-full fixed bottom-0 right-0">
       <div className=" w-full p-2 bg-black rounded-full flex justify-around bg-gradient-to-r from-zinc-700 to-zinc-900 shadow-sm shadow-black">
@@ -36,4 +36,4 @@ const ChatsListFooter = () => {
   );
 };
 
-export default ChatsListFooter;
+export default Footer;
